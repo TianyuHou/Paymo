@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:background="@color/overlayBackground">
+
+
+
+        <TextView
+            android:id="@+id/dairytitle"
+            android:text="Title"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/dairydesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="description"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/dairytitle"
+             />
+
+        <TextView
+            android:id="@+id/dairydate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:layout_marginRight="33dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/dairydesc"
+            android:layout_alignParentRight="true"
+
+             />
+
+
+        <TextView
+            android:id="@+id/dairytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/deletebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dairytitle"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:onClick="deleteList"
+            android:background="@drawable/smallbtnselector"
+            android:text="DELETE"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/dairycategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="35dp"
+            android:textStyle="italic"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/dairydate"
+            android:layout_marginTop="13dp"
+            android:text="category" />
+
+        <TextView
+            android:id="@+id/dairycost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cost"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_alignBaseline="@+id/dairycategory"
+            android:layout_alignBottom="@+id/dairycategory"
+            android:layout_toRightOf="@+id/dairycategory"
+            android:layout_marginLeft="20dp"
+            />
+
+</RelativeLayout>

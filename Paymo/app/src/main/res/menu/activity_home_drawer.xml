@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_dairy"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Dairy" />
+        <item
+            android:id="@+id/nav_cost"
+            android:icon="@drawable/ic_shopping_basket_black_24dp"
+            android:title="Cost" />
+        <item
+            android:id="@+id/nav_earn"
+            android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+            android:title="Earn" />
+    </group>
+
+    <item>
+        <menu>
+            <!--<item-->
+                <!--android:id="@+id/nav_settings"-->
+                <!--android:icon="@drawable/ic_settings_black_24dp"-->
+                <!--android:title="Settings" />-->
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

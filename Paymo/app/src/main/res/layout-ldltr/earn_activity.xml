@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <ImageView
+        android:id="@+id/startdateimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/calender"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="45dp"
+        />
+
+    <TextView
+        android:id="@+id/startdatetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date"
+        android:textSize="18dp"
+        android:textColor="#F5F5F5"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/startdateimage" />
+
+    <EditText
+        android:id="@+id/startdateEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:width="150dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="#F5F5F5"
+        android:textColor="#F5F5F5"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:textIsSelectable="false"
+        android:textColorHint="#F5F5F5"
+        android:layout_toRightOf="@+id/startdatetext" />
+
+    <ImageView
+        android:id="@+id/enddateimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/calender"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/startdateimage"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="45dp"
+        />
+
+    <TextView
+        android:id="@+id/enddatetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date"
+        android:textSize="18dp"
+        android:textColor="#F5F5F5"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/startdatetext"
+        android:layout_toRightOf="@+id/enddateimage" />
+
+    <EditText
+        android:id="@+id/enddateEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="150dp"
+        android:backgroundTint="#F5F5F5"
+        android:textColor="#F5F5F5"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:textIsSelectable="false"
+        android:textColorHint="#F5F5F5"
+        android:layout_below="@+id/startdateEdit"
+        android:layout_alignLeft="@+id/startdateEdit"
+        android:layout_alignStart="@+id/startdateEdit" />
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/earnPie"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="130dp"
+            android:layout_centerHorizontal="true">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <TextView
+            android:id="@+id/earnsummary"
+            android:text="Total Earn"
+            android:textColor="#F5F5F5"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/earnPie"
+            android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/earnamount"
+        android:text="8888"
+        android:textColor="#F5F5F5"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/earnsummary"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

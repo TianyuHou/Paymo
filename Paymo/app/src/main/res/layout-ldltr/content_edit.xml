@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tianyuhou.paymo.EditActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="55dp"
+    tools:showIn="@layout/app_bar_edit">
+
+    <EditText
+        android:id="@+id/titleEdit"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="#F5F5F5"
+        android:hint="Title"
+        android:textCursorDrawable="@null"
+        android:maxLines="2"
+        android:textColor="#F5F5F5"
+        android:textColorHint="#F5F5F5"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/descEdit"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="18dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="31dp"
+        android:layout_marginRight="31dp" />
+
+    <EditText
+        android:id="@+id/descEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleEdit"
+        android:backgroundTint="#F5F5F5"
+        android:hint="Description"
+        android:maxLines="4"
+        android:textCursorDrawable="@null"
+        android:textColor="#F5F5F5"
+        android:textColorHint="#F5F5F5"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="82dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="2"
+        android:id="@+id/gridLayout"
+        android:layout_below="@+id/categorytext"
+        android:layout_centerHorizontal="true"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/categorytext">
+        <TextView
+            android:id="@+id/foodicon"
+            android:onClick="changeBG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_restaurant_menu_black_24dp"
+            android:text="Food"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="313dp" />
+
+        <TextView
+            android:id="@+id/drinkicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="15dp"
+            android:drawableTop="@drawable/ic_local_bar_black_24dp"
+            android:text="Drink"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="313dp" />
+
+        <TextView
+            android:id="@+id/shoppingicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:drawableTop="@drawable/ic_shopping_cart_black_24dp"
+            android:text="Shopping"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="313dp" />
+
+        <TextView
+            android:id="@+id/entertainicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:drawableTop="@drawable/ic_music_video_black_24dp"
+            android:text="Entertainment"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="243dp"
+            tools:layout_editor_absoluteY="313dp" />
+
+        <TextView
+            android:id="@+id/socialicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:drawableTop="@drawable/ic_supervisor_account_black_24dp"
+            android:text="Social"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <TextView
+            android:id="@+id/medicalicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:drawableTop="@drawable/ic_local_hospital_black_24dp"
+            android:text="Medical"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <TextView
+            android:id="@+id/bookicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_import_contacts_black_24dp"
+            android:text="Book"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <TextView
+            android:id="@+id/transporticon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/ic_train_black_24dp"
+            android:text="Transportation"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            tools:layout_editor_absoluteX="243dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+
+    </GridLayout>
+
+
+
+    <TextView
+        android:id="@+id/categorytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Choose Category"
+        android:textColor="#F5F5F5"
+        android:textSize="20dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayouttime"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.504" />
+
+    <EditText
+        android:id="@+id/amounttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/savebtn"
+        android:width="220dp"
+        android:backgroundTint="#F5F5F5"
+        android:ems="10"
+        android:hint="0.00"
+        android:textCursorDrawable="@null"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        android:textColor="#F5F5F5"
+        android:textColorHint="#F5F5F5"
+        android:textSize="25dp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/savebtn"
+        android:layout_marginStart="4dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintLeft_toRightOf="@+id/toggleButton"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/amounttext"
+        android:layout_alignLeft="@+id/amounttext"
+        android:layout_alignStart="@+id/amounttext"
+        android:scaleX="1.0"
+        android:scaleY="0.8"
+        android:textColor="#F5F5F5"
+        android:background="@color/unbigpressed"
+        android:textOff="Cost"
+        android:textOn="Earn"
+        android:textSize="18dp"
+        android:layout_marginStart="26dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/amounttext"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="26dp" />
+
+    <Button
+        android:id="@+id/savebtn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bigbtnselector"
+        android:text="SAVE"
+        android:textColor="#F5F5F5"
+        android:textSize="23dp"
+        android:textStyle="italic"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+
+
+    <GridLayout
+        android:id="@+id/gridLayouttime"
+        android:layout_width="0dp"
+        android:layout_height="101dp"
+        android:layout_below="@+id/descEdit"
+        android:layout_centerHorizontal="true"
+        android:columnCount="3"
+        android:rowCount="2"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="52dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="155dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/descEdit"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.789">
+
+
+        <ImageView
+            android:id="@+id/dateimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/calender"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="163dp" />
+
+        <TextView
+            android:id="@+id/datetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Date"
+            android:textColor="#F5F5F5"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="169dp" />
+
+        <EditText
+            android:id="@+id/dateEdit"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:width="200dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#F5F5F5"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:textColor="#F5F5F5"
+            android:textColorHint="#F5F5F5"
+            android:textIsSelectable="false"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="204dp" />
+
+
+        <ImageView
+            android:id="@+id/timeimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/time"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="216dp" />
+
+        <TextView
+            android:id="@+id/timetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:layout_gravity="center"
+            android:textColor="#F5F5F5"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="107dp"
+            tools:layout_editor_absoluteY="216dp" />
+
+
+        <EditText
+            android:id="@+id/timeEdit"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#F5F5F5"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center"
+            android:textColor="#F5F5F5"
+            android:textColorHint="#F5F5F5"
+            android:textIsSelectable="false"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="154dp" />
+
+    </GridLayout>
+
+
+</android.support.constraint.ConstraintLayout>
